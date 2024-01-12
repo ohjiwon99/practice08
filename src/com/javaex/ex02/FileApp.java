@@ -6,8 +6,14 @@ public class FileApp {
 
 	public static void main(String[] args) {
 
-		// try~catch문을 사용하여 에러를 수정하세요
-//		fileRead();
+		 //try~catch문을 사용하여 에러를 수정하세요
+		 
+		
+		try {
+			fileRead();
+		} catch (IOException e) {
+			System.out.println("파일이 없습니다.");
+		}
 
 	}
 
@@ -16,5 +22,7 @@ public class FileApp {
 		throw new IOException(); // 강제로 예외 발생
 	}
 }
+
+
 
 

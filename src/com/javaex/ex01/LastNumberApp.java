@@ -1,7 +1,5 @@
 package com.javaex.ex01;
 
-import java.io.IOException;
-
 public class LastNumberApp {
 
 	public static void main(String[] args) {
@@ -10,8 +8,7 @@ public class LastNumberApp {
 		lastValue();
 	}
 
-
-	//런타임시 오류발생
+	// 런타임시 오류발생
 	public static void lastValue() {
 
 		int[] intArray = new int[3];
@@ -19,14 +16,19 @@ public class LastNumberApp {
 		intArray[1] = 6;
 		intArray[2] = 9;
 
-		int result;
-		
-		//아래부분을 try~catch문을 사용하여 수정하세요
-		result = intArray[3];
-		
-	
-		System.out.println(result);
-		
+		int result = 0;
+
+		// 아래부분을 try~catch문을 사용하여 수정하세요
+
+		try {
+
+			result = intArray[3];
+			System.out.println(result);
+
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("배열범위를 넘었습니다");
+		}
+
 	}
 
 }
